@@ -3,22 +3,26 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-black">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(59,130,246,0.12)_0%,_transparent_70%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(59,130,246,0.06)_0%,_transparent_50%)]" />
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 h-full w-full object-cover opacity-50"
+      >
+        <source src="/cars/Hero video.mp4" type="video/mp4" />
+      </video>
 
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wMykiIGZpbGwtcnVsZT0ibm9uemVybyI+PHBhdGggZD0iTTM2IDM0djItSDI0di0yaDEyek0zNiAyNHYySDI0di0yaDEyeiIvPjwvZz48L2c+PC9zdmc+')] opacity-40" />
-
-      <div className="absolute top-1/4 left-1/4 h-64 w-64 rounded-full bg-blue-500/10 blur-[120px]" />
-      <div className="absolute bottom-1/4 right-1/4 h-48 w-48 rounded-full bg-blue-400/5 blur-[100px]" />
+      <div className="absolute inset-0 bg-black/60" />
 
       <div className="relative z-10 mx-auto max-w-5xl px-6 text-center anim-fade-in-up">
-        <p className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-blue-400 delay-1 anim-fade-in-down">
+        <p className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-zinc-400 delay-1 anim-fade-in-down">
           Premium Luxury Dealership
         </p>
         <h1 className="mb-6 text-5xl font-bold leading-tight tracking-tight text-white sm:text-7xl md:text-8xl delay-2 anim-fade-in-up">
           Drive Beyond
           <br />
-          <span className="bg-gradient-to-r from-blue-300 via-blue-400 to-blue-600 bg-clip-text text-transparent">
+          <span className="text-white">
             Extraordinary
           </span>
         </h1>

@@ -26,7 +26,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 z-50 w-full border-b transition-all duration-500 ${
         scrolled
-          ? "border-blue-500/20 bg-black/90 backdrop-blur-xl shadow-[0_0_30px_rgba(59,130,246,0.08)]"
+          ? "border-white/10 bg-black/90 backdrop-blur-xl"
           : "border-transparent bg-black/50"
       }`}
     >
@@ -37,7 +37,7 @@ export default function Navbar() {
         >
           <span className="text-2xl font-bold tracking-tight text-white transition-all duration-300 group-hover:tracking-wider">
             KINGS
-            <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent transition-all duration-300 group-hover:from-blue-300 group-hover:to-blue-500">
+            <span className="text-white">
               AUTOMOBILES
             </span>
           </span>
@@ -48,10 +48,10 @@ export default function Navbar() {
             <Link
               key={l.href}
               href={l.href}
-              className={`relative px-4 py-2 text-sm font-medium uppercase tracking-widest transition-colors duration-300 after:absolute after:bottom-0 after:left-1/2 after:h-[2px] after:w-0 after:-translate-x-1/2 after:rounded-full after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-3/4 ${
+              className={`relative px-4 py-2 text-sm font-medium uppercase tracking-widest transition-colors duration-300 after:absolute after:bottom-0 after:left-1/2 after:h-[2px] after:w-0 after:-translate-x-1/2 after:rounded-full after:bg-white after:transition-all after:duration-300 hover:after:w-3/4 ${
                 pathname === l.href
-                  ? "text-blue-400 after:w-3/4"
-                  : "text-zinc-400 hover:text-blue-400"
+                  ? "text-white after:w-3/4"
+                  : "text-zinc-400 hover:text-white"
               }`}
             >
               {l.label}
@@ -64,9 +64,9 @@ export default function Navbar() {
           className="flex flex-col gap-1 md:hidden"
           aria-label="Toggle menu"
         >
-          <span className={`block h-0.5 w-6 bg-white transition-all duration-300 ${open ? "translate-y-1.5 rotate-45 bg-blue-400" : ""}`} />
+          <span className={`block h-0.5 w-6 bg-white transition-all duration-300 ${open ? "translate-y-1.5 rotate-45" : ""}`} />
           <span className={`block h-0.5 w-6 bg-white transition-all duration-300 ${open ? "opacity-0" : ""}`} />
-          <span className={`block h-0.5 w-6 bg-white transition-all duration-300 ${open ? "-translate-y-1.5 -rotate-45 bg-blue-400" : ""}`} />
+          <span className={`block h-0.5 w-6 bg-white transition-all duration-300 ${open ? "-translate-y-1.5 -rotate-45" : ""}`} />
         </button>
       </div>
 
@@ -81,10 +81,10 @@ export default function Navbar() {
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className={`rounded-lg px-4 py-3 text-sm font-medium uppercase tracking-widest transition-all duration-300 hover:bg-blue-500/10 ${
+              className={`rounded-lg px-4 py-3 text-sm font-medium uppercase tracking-widest transition-all duration-300 hover:bg-white/10 ${
                 pathname === l.href
-                  ? "text-blue-400 bg-blue-500/10"
-                  : "text-zinc-400 hover:text-blue-400"
+                  ? "text-white bg-white/10"
+                  : "text-zinc-400 hover:text-white"
               }`}
             >
               {l.label}

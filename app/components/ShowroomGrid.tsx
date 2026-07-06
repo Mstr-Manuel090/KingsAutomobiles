@@ -42,12 +42,9 @@ export default function ShowroomGrid() {
 
   return (
     <section className="relative min-h-screen bg-black pt-28 pb-20">
-      <div className="absolute top-1/4 left-0 h-72 w-72 rounded-full bg-blue-500/5 blur-[150px]" />
-      <div className="absolute bottom-1/4 right-0 h-96 w-96 rounded-full bg-blue-400/5 blur-[150px]" />
-
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="mb-2 text-center anim-fade-in-up">
-          <p className="text-sm font-medium uppercase tracking-[0.3em] text-blue-400">
+          <p className="text-sm font-medium uppercase tracking-[0.3em] text-zinc-400">
             Our Collection
           </p>
           <h1 className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
@@ -65,7 +62,7 @@ export default function ShowroomGrid() {
               placeholder="Search by name or brand..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full rounded-xl border border-white/10 bg-white/5 px-5 py-3.5 text-white placeholder-zinc-600 outline-none backdrop-blur-sm transition-all duration-300 focus:border-blue-500 focus:bg-blue-500/5 focus:ring-2 focus:ring-blue-500/20 hover:border-white/20"
+              className="w-full rounded-xl border border-white/10 bg-white/5 px-5 py-3.5 text-white placeholder-zinc-600 outline-none backdrop-blur-sm transition-all duration-300 focus:border-white/30 focus:bg-white/10 focus:ring-2 focus:ring-white/20 hover:border-white/20"
             />
           </div>
 
@@ -76,7 +73,7 @@ export default function ShowroomGrid() {
                 setBrandFilter(e.target.value);
                 setModelFilter("");
               }}
-              className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3.5 text-white outline-none backdrop-blur-sm transition-all duration-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 hover:border-white/20"
+              className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3.5 text-white outline-none backdrop-blur-sm transition-all duration-300 focus:border-white/30 focus:ring-2 focus:ring-white/20 hover:border-white/20"
             >
               <option value="" className="bg-zinc-900">All Brands</option>
               {brands.map((b) => (
@@ -87,7 +84,7 @@ export default function ShowroomGrid() {
             <select
               value={yearFilter}
               onChange={(e) => setYearFilter(e.target.value)}
-              className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3.5 text-white outline-none backdrop-blur-sm transition-all duration-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 hover:border-white/20"
+              className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3.5 text-white outline-none backdrop-blur-sm transition-all duration-300 focus:border-white/30 focus:ring-2 focus:ring-white/20 hover:border-white/20"
             >
               <option value="" className="bg-zinc-900">All Years</option>
               {years.map((y) => (
@@ -98,7 +95,7 @@ export default function ShowroomGrid() {
             <select
               value={modelFilter}
               onChange={(e) => setModelFilter(e.target.value)}
-              className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3.5 text-white outline-none backdrop-blur-sm transition-all duration-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 hover:border-white/20"
+              className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3.5 text-white outline-none backdrop-blur-sm transition-all duration-300 focus:border-white/30 focus:ring-2 focus:ring-white/20 hover:border-white/20"
             >
               <option value="" className="bg-zinc-900">All Models</option>
               {modelsForBrand.map((m) => (

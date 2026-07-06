@@ -35,7 +35,7 @@ export default function CarDetailModal({
   return (
     <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
       <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" onClick={onClose} />
-      <div className="relative w-full max-w-4xl rounded-3xl border border-white/10 bg-zinc-950 shadow-[0_0_80px_rgba(59,130,246,0.1)] anim-fade-in-up max-h-[90vh] overflow-y-auto">
+      <div className="relative w-full max-w-4xl rounded-3xl border border-white/10 bg-zinc-950 shadow-2xl anim-fade-in-up max-h-[90vh] overflow-y-auto">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/5 text-white/60 backdrop-blur-md transition-all hover:bg-white/10 hover:text-white"
@@ -73,14 +73,14 @@ export default function CarDetailModal({
           </div>
 
           <div className="flex flex-col justify-center p-8 md:col-span-2 md:p-10">
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-blue-400">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-400">
               {car.brand}
             </p>
             <h2 className="mt-2 text-3xl font-bold text-white">
               {car.name}
             </h2>
             <p className="mt-1 text-lg text-zinc-500">{car.model} &middot; {car.year}</p>
-            <p className="mt-6 text-3xl font-bold bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">
+            <p className="mt-6 text-3xl font-bold text-white">
               {car.price}
             </p>
             <p className="mt-4 text-sm leading-relaxed text-zinc-400">
